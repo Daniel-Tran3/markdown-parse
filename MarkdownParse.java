@@ -24,7 +24,7 @@ public class MarkdownParse {
             }
 
             if (markdown.charAt(nextOpenBracket - 1) == '!' ||
-                nextCloseBracket != openParen - 1 ||
+                markdown.charAt(openParen - 1) != ']' ||
                 nextNewLine < closeParen) {
                 
                 currentIndex = closeParen + 1;
