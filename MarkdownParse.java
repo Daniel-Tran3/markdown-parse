@@ -21,7 +21,8 @@ public class MarkdownParse {
             }
             
             if (nextOpenBracket > 0 && 
-                markdown.charAt(nextOpenBracket - 1) == '!') {
+                markdown.charAt(nextOpenBracket - 1) == '!' ||
+                markdown.charAt(openParen - 1) != ']') {
                     currentIndex = closeParen + 1;
                     continue;
             }
