@@ -4,6 +4,7 @@ import org.commonmark.renderer.html.HtmlRenderer;
 
 class TryCommonMark {
     public static void main(String[] args) {
+        Parser parser = Parser.builder().build();
         Node node = parser.parse("Example\n=======\n\nSome more text");
         WordCountVisitor visitor = new WordCountVisitor();
         node.accept(visitor);
